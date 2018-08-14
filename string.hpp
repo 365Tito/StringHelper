@@ -9,10 +9,10 @@ public:
 	int length;
 
 public:
-	String();
-	String(int length);
-	String(char* text);
-	~String();
+	String(); //DONE
+	String(int length); //DONE
+	String(char* text); //DONE
+	~String(); //DONE
 	String copy(String s);
 	String concaternate(String s);
 	String substring(int start,int end);
@@ -20,8 +20,7 @@ public:
 	String* split(String delimiter);
 	String* split(char delimiter);
 	String ltrim();
-	String rtrim();
-	String trim();
+	String rtrim(); o
 	String format(); //todo: determine implementation
 	int compare_string(); //todo: determine return type
 	char* to_char_array();
@@ -44,13 +43,14 @@ public:
 	int last_index_of(char c);
 	int* all_indexes_of(String s);
 	int* all_indexes_of(char c);
+	int len();
 	String reverse();
 	
     String operator +(String &s);
 	String operator -(String &s);
 	String operator *(String &s);
 	friend std::ostream& operator <<(std::ostream& os , String &s); //todo : determine implementation and arguments
-	friend std::istream& operator >>(std::istream& os , String &s); //todo : determine implementation and arguments
+	friend std::istream& operator >>(std::istream& is , String &s); //todo : determine implementation and arguments
 	bool operator ==(String &s); 
 	bool operator !=(String &s);
 	bool operator <(String &s);
